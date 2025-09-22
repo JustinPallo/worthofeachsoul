@@ -1,0 +1,168 @@
+/* --- Root Variables (LDS-themed Colors) --- */
+:root {
+    --primary-blue: #004a91; /* Deep navy blue from church branding */
+    --secondary-blue: #007bc1; /* Lighter accent blue */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --bg-light-gray: #f7f7f7; /* Common background color */
+    --border-color: #dddddd;
+    --font-heading: 'Georgia', 'Times New Roman', serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --- Base Styles --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    background-color: var(--text-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 1rem 0;
+}
+
+/* --- Header --- */
+header .subtitle {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+
+/* --- Calculator Form --- */
+.calculator-wrapper {
+    background-color: var(--bg-light-gray);
+    padding: 2rem 2.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.75rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--primary-blue);
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+#calculate-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    background-color: var(--primary-blue);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#calculate-btn:hover {
+    background-color: var(--secondary-blue);
+}
+
+/* --- Results Section --- */
+.results-container {
+    display: none; /* Hidden by default */
+    margin-top: 2.5rem;
+    padding: 1.5rem 2rem;
+    border: 1px solid var(--border-color);
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.results-container p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    margin: 0.75rem 0;
+}
+
+.results-container p span:first-child {
+    color: #444;
+}
+
+.results-container p span:last-child,
+.results-container p strong:last-child {
+    font-weight: 600;
+}
+
+.grand-total {
+    font-size: 1.3rem !important;
+    color: var(--primary-blue);
+    padding-top: 1rem;
+}
+
+/* --- Footer --- */
+footer {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #888;
+}
