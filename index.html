@@ -1,10 +1,81 @@
-<HTML>
-  <head>
-    
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worth of Each Soul - A Temporal Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <body>
-    <h1>This is WorthofEachSoul.com</h1>
-  </body>
-  
-</HTML>
+    <div class="container">
+        <header>
+            <h1>Worth of Each Soul</h1>
+            <p class="subtitle">Calculating the temporal investment in your eternal salvation.</p>
+        </header>
+
+        <main class="calculator-wrapper">
+            <h2>Lifetime Contribution Calculator</h2>
+            
+            <form id="calculator-form">
+                
+                <div class="form-group">
+                    <label for="current-age">Your Current Age</label>
+                    <input type="number" id="current-age" placeholder="e.g., 30" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="retirement-age">Expected Retirement Age</label>
+                    <input type="number" id="retirement-age" placeholder="e.g., 67" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="annual-income">Average Annual Income ($)</label>
+                    <input type="number" id="annual-income" placeholder="e.g., 60000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fast-offering">Average Monthly Fast Offering ($)</label>
+                    <input type="number" id="fast-offering" placeholder="e.g., 50" required>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="mission">
+                    <label for="mission">Served / Will Serve a Full-Time Mission?</label>
+                </div>
+
+                <button type="submit" id="calculate-btn">Calculate Your Eternal Dividends</button>
+            </form>
+        </main>
+
+        <section id="results" class="results-container">
+            <h2>Your Lifetime Contribution Summary</h2>
+            
+            <p>
+                <span>Total Tithing (10%):</span>
+                <span id="total-tithing">$0.00</span>
+            </p>
+            <p>
+                <span>Total Fast Offerings:</span>
+                <span id="total-fast-offerings">$0.00</span>
+            </p>
+            <p>
+                <span>Mission Contribution:</span>
+                <span id="total-mission">$0.00</span>
+            </p>
+            <hr>
+            <p class="grand-total">
+                <strong>Grand Total "Investment":</strong>
+                <strong id="grand-total">$0.00</strong>
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 worthofeachsoul.com | A purely satirical analysis. Not affiliated with any organization.</p>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
